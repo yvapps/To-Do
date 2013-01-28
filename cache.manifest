@@ -1,0 +1,14 @@
+CACHE MANIFEST
+# 1
+
+index.html
+css/reset.css
+css/app.css
+css/skin.css
+http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js 
+js/app.js
+bilder/erledigt.png
+bilder/holz.jpg
+
+NETWORK:
+*

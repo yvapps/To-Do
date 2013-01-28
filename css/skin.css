@@ -1,0 +1,74 @@
+body {
+    font-family: sans-serif;
+    overflow: hidden;
+    background: #f9d081 url(../bilder/holz.jpg) no-repeat center;
+    background-size: 100% 100%;
+}
+
+li {
+    padding: 10px;
+    background-image: -webkit-gradient(linear, left top, left bottom, 
+        color-stop(0,rgba(255,255,255,.9)), 
+        color-stop(1,rgba(255,255,255,.8)));
+    border-radius: 8px;
+    box-shadow: 0 1px 0 rgba(0,0,0,.3);
+    margin-bottom: 1px;
+    -webkit-user-select: none;
+    -webkit-transform: translate3d(0,0,0);
+}
+
+li input[type=checkbox] {
+    -webkit-appearance: none;
+    float: left;
+    width: 25px;
+    height: 25px;
+    background-image: -webkit-gradient(linear, left top, left bottom, 
+        color-stop(0,rgba(0,0,0,.2)), 
+        color-stop(1,rgba(0,0,0,.1)));
+    border-radius: 2px;
+    border: 1px solid rgba(0,0,0,.4);
+    box-shadow: 0 1px 1px rgba(0,0,0,.3) inset;
+}
+
+/* Animation */
+@-webkit-keyframes erledigt {
+	0% {
+		-webkit-transform: translateX(0);
+	}
+	20% {
+		opacity: 1;
+		-webkit-transform: translateX(-20px);
+	}
+	100% {
+		opacity: 0;
+		-webkit-transform: translateX(2000px);
+	}
+}
+
+li.done {
+    right: 0;
+    left: 0;
+    background-color: #0c0;
+    position: relative;
+	-webkit-animation-name: erledigt;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-fill-mode: forwards;
+}
+
+li.done input[type=checkbox] {
+    background: url(../bilder/erledigt.png) no-repeat center;
+    border: none;
+}
+
+#add input {
+    border-radius: 4px;
+    color: #000;
+    font-weight: bold;
+    background-image: -webkit-gradient(linear, left top, left bottom, 
+        color-stop(0,rgba(255,255,255,.9)), 
+        color-stop(1,rgba(255,255,255,.4)));
+    border-radius: 2px;
+    border: 1px solid rgba(0,0,0,.4);
+    box-shadow: 0 1px 1px rgba(0,0,0,.3) inset;
+}
